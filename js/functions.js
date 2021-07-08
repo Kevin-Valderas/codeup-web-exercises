@@ -95,9 +95,9 @@ alert((calculateTip(billTotal, tipPercentage)).toFixed(2))
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-var originalPrice = 100
-var discountPercent = .2
+var originalPrice = prompt("What's the orioinal price?")
+var discountPercent = prompt("Discount percent?")
 function applyDiscount(num1, num2) {
     return (num1 - (num1 * num2))
 }
-console.log(applyDiscount(originalPrice, discountPercent).toFixed(2))
+alert(applyDiscount(originalPrice, discountPercent).toFixed(2))
