@@ -9,9 +9,9 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-/**function sayHello(name) {
+function sayHello(name) {
      return("Hello, " + name + "!")
-}**/
+}
 
 /**
  * TODO:
@@ -20,16 +20,16 @@
  *
  * console.log 'helloMessage' to check your work
  */
-/**var helloMessage = sayHello("Skye")
-console.log(helloMessage)**/
+var helloMessage = sayHello("Skye")
+console.log(helloMessage)
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-/**var myName = "Skye"
-console.log(sayHello(myName))**/
+var myName = "Skye"
+console.log(sayHello(myName))
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -53,10 +53,10 @@ var random = Math.floor((Math.random() * 3) + 1)
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-/**function isTwo() {
+function isTwo() {
         return (random === 2)
 }
-console.log(isTwo())**/
+console.log(isTwo())
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
