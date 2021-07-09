@@ -19,10 +19,6 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
-
-
-
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -30,6 +26,9 @@
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+analyzeColor() {
+    if (colors[0]) {}
+}
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
