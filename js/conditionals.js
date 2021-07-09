@@ -19,20 +19,10 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-let color = ("red", "blue", "green")
 
-function analyzeColor(){
-    let colorQuestion = prompt("what is your favorite color?")
-    if (colorQuestion === color[0]) {
-        return alert{"The fires of rage burn " + color[0]);
-        } else if(colorQuestion === color[1]) {
-            return alert("Hope's light shines " + color[1]);
-        } else if(colorQuestion === color[2]) {
-            return alert("Pure " + color[2] + "energy comes from unbreakable will.");
-        }
-        return alert ("No corps are known to use " + colorQuestion + " rings.");
-    }
-}
+
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -61,14 +51,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 function analyzeColor(){
     let colorQuestion = prompt("what is your favorite color?")
     if (colorQuestion === colors[0]) {
-            return alert{"The fires of rage burn " + colors[0]);
+            return alert("The fires of rage burn " + colors[0]);
         } else if(colorQuestion === colors[3]) {
             return alert("Pure " + colors[3] + "energy surges from unbreakable will.");
         } else if(colorQuestion === colors[4]) {
             return alert("Hope's light shines " + colors[4]);
         }
         return alert ("No corps are known to use " + colorQuestion + " rings.");
-    }
 }
 /* ########################################################################## */
 
