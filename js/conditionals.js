@@ -54,10 +54,12 @@ function analyzeColor(color) {
             case 'violet':
                 return "Violet is the highest-energy color in the rainbow.";
             default:
-                return "I don\'t know anything about " + color;
+                return "I don\'t know anything about " + color + '. ';
         }
     }
-
+console.log(analyzeColorSwitch('red'),"Red is the lowest-energy color in the rainbow.");
+console.log(analyzeColorSwitch('violet'),"Violet is the highest-energy color in the rainbow.");
+console.log(analyzeColorSwitch('blue'),"I don\'t know anything about " + color + '. ');
     /**
      * TODO:
      * Prompt the user for a color when the page loads, and pass the input from the
@@ -89,7 +91,32 @@ function analyzeColor(color) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+function calculateTotal(luckyNumber, totalAmount) {
+    var discountNumber;
+    switch (luckyNumber) {
+        case 0:
+            discountNumber = 0;
+            break;
+        case 1:
+            discountNumber = .1;
+            break;
+        case 2:
+            discountNumber = .25;
+            break;
+        case 3:
+            discountNumber = .35;
+            break;
+        case 4:
+            discountNumber = .50;
+            break;
+        case 5:
+            discountNumber = 1;
+            break;
+        default:
+            console.log('invalid input');
+    }
+    return totalAmount - (discountNumber * totalAmount);
+}
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -98,8 +125,15 @@ function analyzeColor(color) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-
+var luckyNumber = Math.floor(Math.random() * 6);
+function numberToCurrency(number) {
+    return '$  ' + number(Math.toFixed(2));
+}
+var totalBill = parseFloat(prompt('What is the total bill in dollars?'));
+var message = 'Your lucky number is: ' + luckyNumber + '. '
+ + 'Your price before the discount is: ' + numberToCurrency(totalBill) + '. '
+ + 'Your price after the discount is: ' + numberToCurrency(calculateTotal(luckyNumber, totalBill)) + '. ';
+alert(message);
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -116,3 +150,36 @@ function analyzeColor(color) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+function isNumeric(input) {
+    return !isNaN(input)
+}
+function createEvenOddMessage(number) {
+    return (number % 2 === 0) ? 'Number is even.' : 'Number is odd.'
+}
+function createNumberPlus100Message(number) {
+    return number + 'plus 100 is ' + (number + 100);
+}
+function createNegativePositiveMessage(number) {
+    return (number < 0) ? 'Number is negative' : 'Number is positive';
+}
+function getUserNumAndCheck() {
+    var userWillEnterNumber = confirm('Click OK to enter a number');
+    var userNumber;
+    if (userWillEnterNumber) {
+        userNumber = parseFloat(prompt('Please enter a number'));
+        //if user input is a number
+        if (isNumeric(userNumber)) {
+            //alert even/odd message
+            alert(createEvenOddMessage(userNumber));
+            //alert number plus 100
+            alert(createNumberPlus100Message(userNumber));
+            //alert negative/positive number
+            alert(createNegativePositiveMessage(userNumber));
+        } else {
+            //alert not a number
+            alert('Input is not a number')
+        }
+    }
+}
+getUserNumAndCheck();
