@@ -35,7 +35,13 @@ console.log(isShortWord(ranString()));
 
 
 // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
-
+var str1 = ranString()
+var str2 = ranString()
+function isSameLength(str1, str2) {
+    console.log(str1)
+    console.log(str2)
+    return (str1.length === str2.length)
+}
 
 // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
 // example input: getSmallerSegment("Codeup", 3)

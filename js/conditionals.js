@@ -26,38 +26,48 @@
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
-analyzeColor() {
-    if (colors[0]) {}
+function analyzeColor(color) {
+    if (color === 'red') {
+        return "Red is the lowest-energy color in the rainbow."
+    } else if (color === 'violet') {
+        return "Violet is the highest-energy color in the rainbow."
+    } else {
+        return "I don\'t know anything about " + color;
+    }
 }
-/**
- * TODO:
- * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message every time you refresh the page
- */
+    /**
+     * TODO:
+     * Pass the `randomColor` variable to your function and console.log the results.
+     * You should see a different message every time you refresh the page
+     */
+    console.log(randomColor)
+    console.log(analyzeColor(randomColor));
 
-/**
- * TODO:
- * Refactor your above function to use a switch-case statement
- */
-
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
-
-function analyzeColor(){
-    let colorQuestion = prompt("what is your favorite color?")
-    if (colorQuestion === colors[0]) {
-            return alert("The fires of rage burn " + colors[0]);
-        } else if(colorQuestion === colors[3]) {
-            return alert("Pure " + colors[3] + "energy surges from unbreakable will.");
-        } else if(colorQuestion === colors[4]) {
-            return alert("Hope's light shines " + colors[4]);
+    /**
+     * TODO:
+     * Refactor your above function to use a switch-case statement
+     */
+    function analyzeColorSwitch(color) {
+        switch (color) {
+            case 'red':
+                return "Red is the lowest-energy color in the rainbow.";
+            case 'violet':
+                return "Violet is the highest-energy color in the rainbow.";
+            default:
+                return "I don\'t know anything about " + color;
         }
-        return alert ("No corps are known to use " + colorQuestion + " rings.");
-}
+    }
+
+    /**
+     * TODO:
+     * Prompt the user for a color when the page loads, and pass the input from the
+     * user to your `analyzeColor` function. Alert the return value from your
+     * function to show it to the user.
+     */
+    var userColor = prompt('Please enter a color.').toLowerCase();
+    alert(analyzeColor(userColor));
+
+
 /* ########################################################################## */
 
 /**
