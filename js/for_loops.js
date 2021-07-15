@@ -4,5 +4,5 @@ function showMultiplicationTable() {
         console.log(x + "*" + i + "=" + x * i)
     }
 }
+showMultiplicationTable();
 
-console.log(showMultiplicationTable())
