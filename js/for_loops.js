@@ -22,14 +22,13 @@ showMultiplicationTable();**/
 isOddEven();**/
 
 function makePyramid(x) {
-    for (i = 1; i <= x; i++) {
+    for (var i = 1; i <= x; i++) {
         var makeString = "";
         for (var j = 0; j < i; j++) {
             makeString += i.toString();
         }
         console.log(makeString);
     }
-} makePyramid(9)
-
+} makePyramid(9);
 
 
