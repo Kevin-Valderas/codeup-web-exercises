@@ -11,7 +11,6 @@
         'Uranus',
         'Neptune'
     ];
-console.log(planets);
 
     /**
      * TODO:
@@ -23,40 +22,35 @@ function addSun(){
     return planets.unshift('The Sun');
     }
     addSun();
-    console.log(addSun());
+    console.log(planets);
 function addPluto(){
     console.log('Adding "Pluto" to the end of the planets array.');
     return planets.push('Pluto');
 }
-
-    console.log(addPluto());
+addPluto();
+    console.log(planets);
 function clearSun() {
     console.log('Removing "The Sun" from the beginning of the planets array.');
     return planets.shift();
 }
 clearSun();
-    console.log(clearSun());
+    console.log(planets);
 function clearPluto() {
     console.log('Removing "Pluto" from the end of the planets array.');
     return planets.pop();
 }
-    console.log(clearPluto());
+ clearPluto();
+    console.log(planets);
 function index(input) {
     console.log('Finding and logging the index of "Earth" in the planets array.');
     return planets.indexOf(input);
 }
 console.log(index('Earth'));
-
     console.log("Reversing the order of the planets array.");
-    function reverse(){
-    return planets.reverse()
-    }
+    var reversePlanets = planets.reverse()
 
-    console.log(reverse());
+    console.log(reversePlanets);
 
     console.log("Sorting the planets array.");
-    function sort() {
-        return planets.sort();
-    }
-    console.log(sort());
-})();A
+    console.log(planets);
+})();
