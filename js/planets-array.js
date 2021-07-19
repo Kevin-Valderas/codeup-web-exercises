@@ -46,11 +46,15 @@ function index(input) {
     return planets.indexOf(input);
 }
 console.log(index('Earth'));
-    console.log("Reversing the order of the planets array.");
-    var reversePlanets = planets.reverse()
 
-    console.log(reversePlanets);
+    function reverse() {
+        console.log("Reversing the order of the planets array.");
+        return planets.reverse();
+    }
+
+    console.log(reverse());
 
     console.log("Sorting the planets array.");
+    planets.sort();
     console.log(planets);
 })();
