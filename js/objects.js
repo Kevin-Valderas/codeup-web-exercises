@@ -76,23 +76,39 @@ var books = [
             firstName: "Eoin",
             lastName: "Colfer"
         }
-    },
+      },
     {
         title: "Percy Jackson: Sea of Monsters",
         author: {
-            firstName: "",
-            lastName: "",
+            firstName: "Rick",
+            lastName: "Riordan",
         }
-    },
+      },
     {
-            title: "Artemis Fowl",
-            author: {
-                firstName: "Eoin",
-                lastName: "Colfer"
+        title: "Inkheart",
+        author: {
+            firstName: "Cornelia",
+            lastName: "Funke"
             }
         },
+    {
+        title: "The Merchant of Death",
+        author: {
+            firstName: "D. J.",
+            lastName: "MacHale"
+        }
+      },
+    {
+       title: "Into The Wild",
+       author: {
+           firstName: "Erin" + ", " + "Dan",
+           lastName: "Hunter" + ", " + "Jolley"
+       }
+      }
     ];
-console.log(books[0].title)
+console.log(books[0].title);
+console.log(books[0].author.firstName);
+console.log(books[0].author.lastName);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -117,6 +133,9 @@ console.log(books[0].title)
      *      ---
      *      ...
      */
+books.forEach(function(book) {
+    console.log("Book # " + (books.indexOf(book)+1) + "\n " + "Title: " + book.title + "\n " + " Author: " + book.author.firstName + " " + book.author.lastName)
+    });
 
     /**
      * Bonus:
