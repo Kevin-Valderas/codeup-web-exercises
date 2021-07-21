@@ -50,11 +50,19 @@ person.sayHello = function () {
         {name: 'George', amount: 320}
     ];
 
+    // for (var i = 0; i < shoppers.length; i += 1) {
+    //     var discountedAmount = calculateDiscount(shoppers[i].amount, discountThreshold, discountPercentage);
+    //     var output = shoppers[i].name + ' is purchasing ' + shoppers[i].amount +
+    //         ' of stuff. He will get ' + discountedAmount +
+    //         ' off the purchase and pay ' +
+    //         (shoppers[i].amount - discountedAmount) + '.';
+    //     console.log(output);
+
     shoppers.forEach(function(shopper) {
-        if (shopper.amount < 200) {
-            console.log(shopper.name + " spent $" + shopper.amount + " , which isn't enough to apply the discount, so " + shopper.name + "'s total will be $" + shopper.amount + ".");
+        if (shopper.amount <= 200) {
+            console.log(shopper.name + " spent $" + (shopper.amount).toFixed(2) + " , which isn't enough to apply the discount, so " + shopper.name + "'s total will be $" + (shopper.amount).toFixed(2) + ".");
         }else if (shopper.amount > 200) {
-            console.log(shopper.name + " spent $" + shopper.amount + " , which earns them a 12% discount, so " + shopper.name + "'s total will be $" + (shopper.amount - (shopper.amount * .12)).toFixed(2) + ".");
+            console.log(shopper.name + " spent $" + (shopper.amount).toFixed(2) + " , which earns them a 12% discount, so " + shopper.name + "'s total will be $" + (shopper.amount - (shopper.amount * .12)).toFixed(2) + ".");
     }})
 
     /** TODO:
