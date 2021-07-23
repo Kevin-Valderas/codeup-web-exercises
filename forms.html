@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Register With Us</title>
 </head>
 <body>
 <form method="POST" action="https://request-inspector.glitch.me/">
-
+    <p>
     <label for="email">Email</label>
     <input id="email" name="email" type="text">
     <br>
-
+    </p>
+    <p>
     <label for="password">Password</label>
     <input id="password" name="password" type="password">
     <br>
-    <label>
-        <textarea name="bio"></textarea>
+    </p>
+    <p>
+        <label for = "bio"><strong>Bio</strong><br>
+        <textarea id = "bio" name="bio"></textarea>
+        </label>
+    </p>
+    <p>
+    <label><strong> How did you hear about us? </strong><br>
+        <br>
+    Billboard <input type="checkbox" name="reference" value="billboard"><br>
+        <br>
+    Radio Advertisement <input type="checkbox" name="reference" value="radio advertisement"><br>
+        <br>
+    Internet Advertisement <input type="checkbox" name="reference" value="internet advertisement"><br>
+        <br>
+    Other <input type="checkbox" name="reference" value="other"><br>
+        <br>
     </label>
+    </p>
+    <p>
+        <label> <strong> What browser are you using? </strong>  <br>
+            <br>
+        <select name =browser>
+            <option value="Google_Chrome">Chrome</option>
+            <option value="Mozilla_Firefox">Firefox</option>
+            <option value="Microsoft_Edge">Edge</option>
+            <option value="Other">Other</option>
+        </select>
+        </label>
+    </p>
     <br>
-    <label>
-    Billboard <input type="radio" name="quiz_question_1" value="billboard"><br>
-    Radio Advertisement <input type="radio" name="quiz_question_1" value="radio advertisement"><br>
-    Internet Advertisement <input type="radio" name="quiz_question_1" value="internet advertisement"><br>
-    Other <input type="radio" name="quiz_question_1" value="other"><br>
-    </label>
     <input type="submit">
 
 </form>
