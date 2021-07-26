@@ -2,6 +2,9 @@
     color: red;
     text-decoration: underline;
 }
+.headfont {
+    font-family: fantasy, sans-serif;
+}
 h1 {
     text-align: center;
 }
