@@ -10,5 +10,12 @@ h1 {
     background-image: url(../images/smoke.jpeg);
 }
 .text {
-    color: azure;
+    color: darkred;
+    text-align: center;
+}
+.list {
+    list-style: inside url("../images/7rw56L01.svg");
+}
+.contain {
+    object-fit: scale-down;
 }
