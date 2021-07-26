@@ -19,3 +19,7 @@ h1 {
 .contain {
     object-fit: scale-down;
 }
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
