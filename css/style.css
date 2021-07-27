@@ -14,7 +14,7 @@ h1 {
 .text {
     color: darkred;
     text-align: center;
-    font-family: "Grenze Gotisch", sans-serif;
+    font-family: "Grenze Gotisch", serif;
 }
 .list {
     list-style: inside url("../images/7rw56L01.svg");
@@ -25,4 +25,16 @@ h1 {
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: darkmagenta;
+}
+a:active {
+    color: lightseagreen;
 }
