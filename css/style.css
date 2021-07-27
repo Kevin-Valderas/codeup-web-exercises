@@ -1,10 +1,9 @@
 .fancy-header {
     color: red;
     text-decoration: underline;
+    font-family: fantasy, sans-serif
 }
-.headfont {
-    font-family: fantasy, sans-serif;
-}
+
 h1 {
     text-align: center;
 }
@@ -15,6 +14,7 @@ h1 {
 .text {
     color: darkred;
     text-align: center;
+    font-family: "Grenze Gotisch", sans-serif;
 }
 .list {
     list-style: inside url("../images/7rw56L01.svg");
