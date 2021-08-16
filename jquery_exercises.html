@@ -4,9 +4,35 @@
   <title>Curriculum Code Sample</title>
 </head>
 <body>
+<h1 id="char-name">Ti'Tahn, Guardian of the Quadrant</h1>
+<p id="char-story">
+  Thrust into this world through a hole in space-time, the being known only as Ti'Tahn utilizes his powers of energy manipulation to uphold his own standards of justice.
+</p>
+<div>
+  <ul>
+    <li id="powers">
+      Energy absorption (Passive)-Passively absorbs half the damage taken from abilities; converts damage into energy stacks. Max 200 stacks.
+    </li>
+  </ul>
+</div>
 
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/my-custom-javascript.js"></script>"
+<script>
+  $('#char-name').click(function() {
+    $(this).css({"backgroundColor" : "blue"});
+  });
+  $('#char-story').dblclick(function(){
+    $(this).css({'font-size' : '18px'})
+  });
+  $('#powers').hover(
+          function() {
+            $(this).css('color', 'red');
+          },
+          function() {
+            $(this).css('color', 'black');
+          }
+  );
+</script>
 </body>
