@@ -12,6 +12,9 @@
         .highlight {
             background-color: yellow;
         }
+        .bold {
+            font-weight: bold;
+        }
     </style>
 
 </head>
@@ -91,9 +94,11 @@ $('button').click(function (){
         $(this).children().last().toggleClass('highlight');
     });
 });
-// $('#highlight').click(function (){
-//     $('ul').lastChild("highlight");
-// });
+
+$('h3').click(function (){
+        $(this).siblings().toggleClass('bold');
+});
+
 </script>
 </body>
 </html>
