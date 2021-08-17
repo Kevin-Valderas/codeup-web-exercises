@@ -15,6 +15,9 @@
         .bold {
             font-weight: bold;
         }
+        .blue {
+            color: blue;
+        }
     </style>
 
 </head>
@@ -96,8 +99,10 @@ $('button').click(function (){
 });
 
 $('h3').click(function (){
-        $(this).siblings().toggleClass('bold');
+    $(this).siblings().toggleClass('bold');
+    $(this).first().next().toggleClass('blue');
 });
+
 
 </script>
 </body>
