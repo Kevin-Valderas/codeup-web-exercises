@@ -33,9 +33,11 @@
        .then(function(result) {
             map.setCenter(result);
     });
+
     reverseGeocode({lng: -157.8060, lat: 21.2620}, MAPBOX_TOKEN).then(function (results){
         console.log(results);
     });
+
 </script>
 </body>
 </html>
