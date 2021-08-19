@@ -13,7 +13,6 @@
 </head>
 <body>
 
-
 <div id="map"></div>
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
@@ -30,14 +29,13 @@
         zoom: 12 // starting zoom
     });
 
-    document.querySelector('#change-map-btn').addEventListener('click', function() {
-        var address = document.querySelector('#address').value;
-        geocode(Whitefish, MAPBOX_TOKEN)
-            .then(function(result) {
-                map.setCenter(result);
-            })
+    geocode("Whitefish, Montana", MAPBOX_TOKEN)
+       .then(function(result) {
+            map.setCenter(result);
     });
-
+    reverseGeocode({lng: -157.8060, lat: 21.2620}, MAPBOX_TOKEN).then(function (results){
+        console.log(results);
+    });
 </script>
 </body>
 </html>
