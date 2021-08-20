@@ -2,38 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mapbox API</title>
+  <title>Mapbox Exercise</title>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
   <style>
     #map {
-      width: 800px;
-      height: 800px;
+      width: 100%;
+      height: 700px;
     }
   </style>
 </head>
 <body>
 
-<div id="map"></div>
+<div id='map'></div>
+
+<select id="zoom">
+  <option value="5">5</option>
+  <option value="10">10</option>
+  <option value="15" selected>15</option>
+  <option value="20">20</option>
+</select>
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
+
 <script>
-  "use strict";
+
+  var select = document.querySelector('#zoom');
+
+  var restaurants = [
+    {
+      name: 'Fogo de Chão',
+      address: 'Fogo de Chão Brazilian Steakhouse, San Antonio, TX',
+      message: 'Best churrascaria in SA!'
+    },
+    {
+      name: 'Moroccan Bites',
+      address: 'Moroccan Bites Tajine, San Antonio, TX',
+      message: 'Definitely earned its spotlight on Guy Fieri\'s DDD!'
+    },
+    {
+      name: 'Ginza Ramen and Poke',
+      address: '8771 TX-151 #106, San Antonio, TX 78245',
+      message: 'Pork belly tonkotsu brings me back every time!'
+    }
+  ];
+
+  function placeAllMarkers(restaurants, map) {
+    restaurants.forEach(function(restaurant) {
+      placeMarker(restaurant, map);
+    });
+  }
+
+  function placeMarker(restaurantObject, map) {
+    geocode(restaurantObject.address, MAPBOX_TOKEN).then(function(coordinates) {
+      var popup = new mapboxgl.Popup()
+              .setHTML('<h3>' + restaurantObject.name + '</h3><p>' + restaurantObject.message + '</p>');
+      new mapboxgl.Marker()
+              .setLngLat(coordinates)
+              .setPopup(popup)
+              .addTo(map);
+    });
+  }
 
   mapboxgl.accessToken = MAPBOX_TOKEN;
+
+
   var map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-98.491142, 29.424349], // starting position [lng, lat]
-    zoom: 12 // starting zoom
-  });
-  geocode("600 Navarro St #350, San Antonio, TX 78205", MAPBOX_TOKEN).then(function(result) {
-    console.log(result);
-    map.setCenter(result);
-    map.setZoom(20);
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 10,
+    center: [-98.4916, 29.4252]
   });
 
+
+  select.addEventListener('change', function() {
+    map.setZoom(select.value);
+  });
+
+
+  placeAllMarkers(restaurants, map);
+
 </script>
+
 </body>
 </html>
