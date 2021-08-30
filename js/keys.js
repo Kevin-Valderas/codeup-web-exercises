@@ -1,2 +1,3 @@
 const MAPBOX_TOKEN = 'pk.eyJ1IjoidGhlbGl2aW5nc2tyeXB0IiwiYSI6ImNrc2o0ZnQ5OTBvMDIydHBjZHBhODR0Y3AifQ.3Xdtuv6tAI_2W_uhcekYfA'
 const WEATHER_APP_ID = '3e74e5186e38ccf552af5db030aa5863'
+const GITHUB_TOKEN = `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`;
